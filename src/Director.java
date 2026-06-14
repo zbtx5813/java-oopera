@@ -1,5 +1,5 @@
 public class Director extends Person {
-    Director (String name, String surname, Gender gender, int height) {
+    public Director (String name, String surname, Gender gender, int height) {
         super(name, surname, gender, height);
     }
 
@@ -8,7 +8,7 @@ public class Director extends Person {
         return "Director{" + "name = " + name + ", surname = " + surname + '}';
     }
 
-    void printDirector() {
+    public void printDirector() {
         System.out.print(toString());
     }
 }

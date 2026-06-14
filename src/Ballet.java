@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow {
-    Choreographer choreographer;
+    private Choreographer choreographer;
 
-    Ballet(String title, int duration, Director director, ArrayList<Actor> listOfActors, MusicAuthor musicAuthor,
+    public Ballet(String title, int duration, Director director, ArrayList<Actor> listOfActors, MusicAuthor musicAuthor,
            String librettoText, Choreographer choreographer) {
         super(title, duration, director, listOfActors, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
 
     @Override
-    void printActors() {
+    public void printActors() {
         System.out.println("Актёры балета:");
         for (Actor actor : listOfActors) {
             System.out.println(actor.toString());
@@ -18,13 +18,13 @@ public class Ballet extends MusicalShow {
     }
 
     @Override
-    void printLibrettoText() {
+    public void printLibrettoText() {
         System.out.println("Текст либретто к балету:");
         System.out.println(librettoText);
     }
 
     @Override
-    void addActor(Actor actor) {
+    public void addActor(Actor actor) {
         for (Actor actor2 : listOfActors) {
             if (actor.equals(actor2)) {
                 System.out.print("Такой актёр уже есть в балете: ");
@@ -36,7 +36,7 @@ public class Ballet extends MusicalShow {
     }
 
     @Override
-    void replaceActor(Actor newActor, Actor oldActor) {
+    public void replaceActor(Actor newActor, Actor oldActor) {
         for  (Actor actor : listOfActors) {
             if (oldActor.equals(actor)) {
                 actor.setActor(newActor);

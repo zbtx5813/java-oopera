@@ -1,9 +1,9 @@
 public class Person {
-    String name, surname;
-    Gender gender;
-    int height;
+    protected String name, surname;
+    protected Gender gender;
+    protected int height;
 
-    Person (String name, String surname, Gender gender, int height) {
+    public Person (String name, String surname, Gender gender, int height) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
